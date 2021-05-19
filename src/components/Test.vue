@@ -1,29 +1,8 @@
-<template>
-  <div>
-    <div>{{ count }}</div>
-    <button @click="add">+++</button>
-  </div>
-</template>
-<script>
-import { watchEffect } from 'vue'
-
-export default {
-  name: 'Test',
-  props: {
-    count: Number
-  },
-  emits: ['add', 'alert'],
-  setup(props, ctx) {
-    const add = () => {
-      ctx.emit('add', 50)
-    }
-
-    watchEffect(() => {
-      console.log(`props.count = ${props.count}`)
-    })
-    return {
-      add
-    }
-  }
-}
-</script>
+<!--
+ * @Author: your name
+ * @Date: 2021-05-19 22:12:45
+ * @LastEditTime: 2021-05-19 22:44:07
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue3-ts-app\src\components\Test.vue
+-->
