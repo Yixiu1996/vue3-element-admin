@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-19 21:47:02
+ * @LastEditTime: 2021-05-19 21:47:12
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vite-project\src\utils\axios.ts
+ */
 import Axios from 'axios'
 import { ElMessage } from 'element-plus'
 

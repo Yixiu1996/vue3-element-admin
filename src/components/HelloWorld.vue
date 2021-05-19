@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-19 21:14:32
+ * @LastEditTime: 2021-05-19 21:49:21
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \vite-project\src\components\HelloWorld.vue
+-->
 <template>
   <h1>{{ msg }}</h1>
 
@@ -31,6 +39,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
+import axios from '../utils/axios'
 export default defineComponent({
   name: 'HelloWorld',
   props: {
@@ -41,6 +50,14 @@ export default defineComponent({
   },
   setup: () => {
     const count = ref(0)
+    axios
+      .get('users/jcz')
+      .then((res) => {
+        console.log('res:', res)
+      })
+      .catch((err) => {
+        console.log('err:', err)
+      })
     return { count }
   }
 })

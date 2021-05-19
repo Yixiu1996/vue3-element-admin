@@ -1,10 +1,15 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-19 21:35:15
+ * @LastEditTime: 2021-05-19 21:43:14
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vite-project\src\store\index.ts
+ */
 import { createStore } from 'vuex'
-
 const defaultState = {
   count: 0
 }
-
-// Create a new store instance.
 export default createStore({
   state() {
     return defaultState

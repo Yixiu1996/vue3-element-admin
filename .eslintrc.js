@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-19 22:03:32
+ * @LastEditTime: 2021-05-19 22:07:19
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue3-ts-app\.eslintrc.js
+ */
 module.exports = {
   env: {
     browser: true,
