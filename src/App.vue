@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 21:06:48
- * @LastEditTime: 2021-05-20 22:27:51
+ * @LastEditTime: 2021-05-20 22:53:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue3-element-admin\src\App.vue
@@ -21,9 +21,19 @@
         <el-menu
           background-color="#392473"
           text-color="#fff"
+          :router="true"
         >
           <!--一级栏目-->
           <el-submenu index="1">
+            <template #title>
+              <span>Dashboard</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/"><i class="el-icon-data-line" />首页</el-menu-item>
+              <el-menu-item index="/add"><i class="el-icon-data-line" />添加商品</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="2">
             <template #title>
               <span>学习</span>
             </template>
@@ -32,7 +42,7 @@
               <el-menu-item><i class="el-icon-data-line" />vue3</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-          <el-submenu index="2">
+          <el-submenu index="3">
             <template #title>
               <span>娱乐</span>
             </template>

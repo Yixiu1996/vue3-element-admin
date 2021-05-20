@@ -1,21 +1,43 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 22:12:59
- * @LastEditTime: 2021-05-20 22:13:51
+ * @LastEditTime: 2021-05-20 22:39:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue3-element-admin\src\components\Header.vue
 -->
 <template>
   <div class="header">
-    <div class="left">左</div>
+    <div class="left">
+      <span style="font-size: 20px;">{{name}}</span>
+    </div>
     <div class="right">右</div>
   </div>
 </template>
 
 <script>
+import {reactive, toRefs} from 'vue'
+import {useRouter} from 'vue-router'
 export default {
-  name: 'Header'
+  name: 'Header',
+  setup(){
+    const router = useRouter()
+    const pathMap = {
+      index: '首页',
+      add: '添加商品'
+    }
+    const state = reactive({
+      name: '首页'
+    })
+    router.afterEach((to)=>{
+      console.log('to', to)
+      const {id} = to.query
+      state.name = pathMap[to.name]
+    })
+    return {
+      ...toRefs(state)
+    }
+  }
 }
 </script>
 
