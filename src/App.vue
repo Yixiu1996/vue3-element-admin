@@ -13,16 +13,12 @@
         <!--系统名称+logo-->
         <div class="head">
           <div>
-            <img src="@/assets/img2.jpg" alt="logo">
+            <img src="@/assets/img2.jpg" alt="logo" />
             <span>vue3 admin</span>
           </div>
         </div>
         <div class="line" />
-        <el-menu
-          background-color="#392473"
-          text-color="#fff"
-          :router="true"
-        >
+        <el-menu background-color="#392473" text-color="#fff" :router="true">
           <!--一级栏目-->
           <el-submenu index="1">
             <template #title>
@@ -71,7 +67,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 export default {
   name: 'App',
-  components:{
+  components: {
     Header,
     Footer
   }
@@ -88,7 +84,7 @@ export default {
   height: 100vh;
 }
 .aside {
-  width: 200px!important;
+  width: 200px !important;
   background-color: #222832;
 }
 .head {
@@ -112,10 +108,10 @@ export default {
   color: #ffffff;
 }
 .line {
-  border-top: 1px solid hsla(0,0%,100%,.05);
-  border-bottom: 1px solid rgba(0,0,0,.2);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-.content{
+.content {
   display: flex;
   flex-direction: column;
 }
@@ -128,17 +124,17 @@ body {
   box-sizing: border-box;
 }
 .el-menu {
-  border-right: none!important;
+  border-right: none !important;
 }
 .el-submenu {
-  border-top: 1px solid hsla(0, 0%, 100%, .05);
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .el-submenu:first-child {
   border-top: none;
 }
-.el-submenu [class^="el-icon-"] {
-  vertical-align: -1px!important;
+.el-submenu [class^='el-icon-'] {
+  vertical-align: -1px !important;
 }
 a {
   color: #409eff;

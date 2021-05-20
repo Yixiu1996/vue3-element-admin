@@ -7,12 +7,10 @@
  * @FilePath: \vue3-element-admin\src\views\AddGood.vue
 -->
 <template>
-    <div>
-        添加商品
-    </div>
+  <div>添加商品</div>
 </template>
 <script>
 export default {
-    name: 'AddGood'
+  name: 'AddGood'
 }
 </script>

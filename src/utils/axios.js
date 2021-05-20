@@ -24,7 +24,7 @@ axios.defaults.headers['token'] = localStorage.getItem('token') || ''
 axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 // 请求拦截器，内部根据返回值，重新组装，统一管理。
-axios.interceptors.response.use(res => {
+axios.interceptors.response.use((res) => {
   if (typeof res.data !== 'object') {
     ElMessage.error('服务端异常！')
     return Promise.reject(res)
