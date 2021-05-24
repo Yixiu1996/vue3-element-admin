@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
     "element-plus": "1.0.2-beta.28",
     "sass": "^1.32.13",
     "vue": "^3.0.5",
@@ -17,7 +18,9 @@
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
     "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
     "prettier": "^2.3.0",
