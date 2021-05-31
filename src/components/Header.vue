@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 22:12:59
- * @LastEditTime: 2021-05-24 23:16:01
+ * @LastEditTime: 2021-05-31 21:17:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue3-element-admin\src\components\Header.vue
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { reactive, toRefs, watch} from 'vue'
+import { reactive, toRefs, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import dayjs from 'dayjs'
 
@@ -35,33 +35,38 @@ export default {
     }
     const state = reactive({
       name: '首页',
-      timeValue:'',
+      timeValue: '',
       timer: null,
       iconfont: '&#xe690;'
     })
     router.afterEach((to) => {
       // const { id } = to.query
       state.name = pathMap[to.name]
+      console.log(to)
     })
-    if(state.timer) clearInterval()
-    state.timer = setInterval(()=>{
+    if (state.timer) clearInterval()
+    state.timer = setInterval(() => {
       state.timeValue = dayjs().format('YYYY/DD/MM HH:MM:ss')
       // console.log(dayjs().format('HH'))
     }, 1000)
-    watch(state, () => {
-      if(dayjs().format('HH') >= 0 && dayjs().format('HH') < 6){
-        state.iconfont = 'iconfont icon-lingchen'
-      } else if(dayjs().format('HH') >= 6 && dayjs().format('HH') < 12){
-        state.iconfont = 'iconfont icon-shangwu'
-      } else if(dayjs().format('HH') >= 12 && dayjs().format('HH') < 18){
-        state.iconfont = 'iconfont icon-xiawu'
-      } else {
-        state.iconfont = 'iconfont icon-wanshang'
+    watch(
+      state,
+      () => {
+        if (dayjs().format('HH') >= 0 && dayjs().format('HH') < 6) {
+          state.iconfont = 'iconfont icon-lingchen'
+        } else if (dayjs().format('HH') >= 6 && dayjs().format('HH') < 12) {
+          state.iconfont = 'iconfont icon-shangwu'
+        } else if (dayjs().format('HH') >= 12 && dayjs().format('HH') < 18) {
+          state.iconfont = 'iconfont icon-xiawu'
+        } else {
+          state.iconfont = 'iconfont icon-wanshang'
+        }
+      },
+      {
+        // 页面加载会先执行一次
+        immediate: true
       }
-    }, {
-      // 页面加载会先执行一次
-      immediate: true
-    })
+    )
     return {
       ...toRefs(state)
     }
@@ -80,11 +85,11 @@ export default {
   .right {
     display: flex;
   }
-  .iconfont{
-    color: #FF8000;
+  .iconfont {
+    color: #ff8000;
   }
-  .right-time{
-    margin-left:15px;
+  .right-time {
+    margin-left: 15px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 21:06:48
- * @LastEditTime: 2021-05-20 22:53:35
+ * @LastEditTime: 2021-05-31 21:16:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue3-element-admin\src\App.vue
@@ -22,7 +22,7 @@
           <!--一级栏目-->
           <el-submenu index="1">
             <template #title>
-              <span>Dashboard</span>
+              <span>商城</span>
             </template>
             <el-menu-item-group>
               <el-menu-item index="/"><i class="el-icon-data-line" />首页</el-menu-item>
@@ -65,6 +65,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+
 export default {
   name: 'App',
   components: {
